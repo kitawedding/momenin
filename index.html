@@ -1,87 +1,437 @@
 <!DOCTYPE html>
+<html lang="id">
 <head>
-        <script src="https://cdn.counter.dev/script.js" data-id="83d83041-9c16-4469-8b0e-2d7e89ba18f5" data-utcoffset="7"></script>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta property="og:title" content="Undangan Website Termurah" />
-        <meta property="og:description" content="Share Undangan Pernikahanmu Dengan Mudah, Murah, dan Elegan!" />
-        <meta property="og:image" content="https://momenin.my.id/assets/profil.png" />
-        <meta property="og:url" content="https://momenin.my.id" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image">
-        <title>Undangan Website Termurah</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="https://momenin.my.id/assets/logo.png" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-  <style rel="stylesheet">
-    
-/*======================
-    404 page
-=======================*/
-
-
-.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
-}
-
-.page_404  img{ width:100%;}
-
-.four_zero_four_bg{
- 
- background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
-    background-position: center;
- }
- 
- 
- .four_zero_four_bg h1{
- font-size:80px;
- }
- 
-  .four_zero_four_bg h3{
-			 font-size:80px;
-			 }
-			 
-			 .link_404{			 
-	color: #fff!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;}
-	.contant_box_404{ margin-top:-50px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Halaman Tidak Ditemukan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 40px 20px;
+            z-index: 10;
+        }
+        
+        .error-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+        
+        .error-code {
+            font-size: 10rem;
+            font-weight: bold;
+            color: #4e54c8;
+            line-height: 1;
+            text-shadow: 2px 2px 0px #8f94fb;
+            position: relative;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-51%, -50%);
+            color: rgba(78, 84, 200, 0.2);
+            z-index: -1;
+            font-size: 12rem;
+            filter: blur(8px);
+            animation: float 6s ease-in-out infinite alternate;
+        }
+        
+        .error-message {
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #333;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            background-color: #4e54c8;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s;
+            animation-fill-mode: both;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s;
+        }
+        
+        .home-btn:hover {
+            background-color: #3a40a0;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .home-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* SVG Animation */
+        .spaceship {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        /* Background Animasi */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            z-index: -1;
+        }
+        
+        .bg-animation li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            border-radius: 50%;
+        }
+        
+        .bg-animation li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+        
+        .bg-animation li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+        
+        .bg-animation li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+        
+        .bg-animation li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+        
+        .bg-animation li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+        
+        .bg-animation li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+        
+        .bg-animation li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+        
+        .bg-animation li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+        
+        .bg-animation li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+        
+        .bg-animation li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+        
+        /* Keyframes */
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(-51%, -50%);
+            }
+            100% {
+                transform: translate(-49%, -52%);
+            }
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+        
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsif */
+        @media screen and (max-width: 768px) {
+            .error-code {
+                font-size: 7rem;
+            }
+            
+            .error-code::after {
+                font-size: 8rem;
+            }
+            
+            .error-message {
+                font-size: 1.5rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+            }
+            
+            .spaceship {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .error-container {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-code::after {
+                font-size: 6rem;
+            }
+            
+            .error-message {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <section class="page_404">
-	<div class="container">
-		<div class="row">	
-		<div class="col-sm-12 ">
-		<div class="col-sm-10 col-sm-offset-1  text-center">
-		<div class="four_zero_four_bg">
-			<h1 class="text-center ">404</h1>
-		
-		
-		</div>
-		
-		<div class="contant_box_404">
-		<h3 class="h2">
-		Look like you're lost
-		</h3>
-		
-		<p>the page you are looking for not avaible!</p>
-		
-		<a href="" class="link_404">Go to Home</a>
-	</div>
-		</div>
-		</div>
-		</div>
-	</div>
-</section>
+    <div class="bg-animation">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    <!-- Stars Animation -->
+    <script>
+        function createStars() {
+            const container = document.body;
+            const starCount = 50;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // Random position
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random animation delay
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                container.appendChild(star);
+            }
+        }
+        
+        window.onload = function() {
+            createStars();
+        }
+    </script>
+    
+    <div class="container">
+        <div class="error-container">
+            <div class="spaceship">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+                    <defs>
+                        <linearGradient id="rocket-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4e54c8" />
+                            <stop offset="100%" style="stop-color:#8f94fb" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Roket Utama -->
+                    <path fill="url(#rocket-gradient)" d="M400 100c-55.23 0-100 44.77-100 100 0 78.4 44.77 200 100 400 55.23-200 100-321.6 100-400 0-55.23-44.77-100-100-100z" />
+                    <!-- Jendela Roket -->
+                    <circle fill="#ffffff" cx="400" cy="180" r="25" />
+                    <!-- Sayap Kiri -->
+                    <path fill="#3a40a0" d="M300 350c-33.14 0-60-26.86-60-60 0-16.57 13.43-30 30-30 60 0 90 30 90 90h-60z" />
+                    <!-- Sayap Kanan -->
+                    <path fill="#3a40a0" d="M500 350c33.14 0 60-26.86 60-60 0-16.57-13.43-30-30-30-60 0-90 30-90 90h60z" />
+                    <!-- Api Roket -->
+                    <path fill="#ff9f43" d="M400 500c-16.57 0-30 13.43-30 30s13.43 30 30 30 30-13.43 30-30-13.43-30-30-30z">
+                        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
+                    </path>
+                    <path fill="#ffd166" d="M400 520c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z">
+                        <animate attributeName="opacity" values="0.5;1;0.5" dur="0.5s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+            <h1 class="error-code">404</h1>
+            <h2 class="error-message">Halaman Tidak Ditemukan</h2>
+            <p class="error-description">Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan. Mungkin Anda salah mengetik URL atau halaman telah dihapus.</p>
+            <a href="/" class="home-btn">Kembali ke Beranda</a>
+        </div>
+    </div>
 </body>
-</hmtl>
+</html>
